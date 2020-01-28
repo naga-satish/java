@@ -1,0 +1,26 @@
+import java.util.*;
+public class Hailstrome 
+{
+
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter a number:");
+		int n, count=0;
+		Scanner in = new Scanner(System.in);
+		n=in.nextInt();
+		while(n>1)
+			if(n%2==0)
+			{
+			System.out.println(n +" is Even so I'm taking half:"+ n/2);
+			n=n/2;
+			count=count+1;
+			}
+			else
+			{
+			System.out.println(n +" is Odd so I'm taking 3n+1:"+ (3*n+1));
+			n=3*n+1;
+			count=count+1;
+			}
+		System.out.println("Number of steps is "+ count);
+
+	}
